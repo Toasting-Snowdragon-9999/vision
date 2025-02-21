@@ -1,0 +1,20 @@
+    vector<Vec3f> circles;
+    cuda::GpuMat circles_gpu;
+    
+    // The CUDA HoughCircles function
+    cuda::HoughCircles(blurred, circles_gpu, HOUGH_GRADIENT, 1, 20, 50, 30, 20, 40);
+    
+    circles_gpu.download(circles);
+
+    // Draw the detected circles
+    for (size_t i = 0; i < circles.size(); i++) {
+        Vec3f c = circles[i];
+        Point center(cvRound(c[0]), cvRound(c[1]));
+        int radius = cvRound(c[2]);
+
+        // Draw the circle
+        circle(src_host, center, radius, Scalar(0, 255, 0), 4);
+
+        // Draw the center
+        circle(src_host, center, 5, Scalar(0, 0, 255), -1);
+    }

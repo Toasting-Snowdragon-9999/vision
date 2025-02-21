@@ -1,0 +1,3 @@
+/home/rootlet/git/computer_vision/build/CMakeFiles/vision_executable.dir
+/home/rootlet/git/computer_vision/build/CMakeFiles/edit_cache.dir
+/home/rootlet/git/computer_vision/build/CMakeFiles/rebuild_cache.dir
