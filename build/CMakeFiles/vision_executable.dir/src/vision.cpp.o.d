@@ -1,8 +1,6 @@
 CMakeFiles/vision_executable.dir/src/vision.cpp.o: \
- /home/rootlet/git/computer_vision/src/vision.cpp \
- /usr/include/stdc-predef.h \
- /home/rootlet/git/computer_vision/include/vision.h \
- /usr/include/c++/14.2.1/iostream \
+ /home/rootlet/vision/src/vision.cpp /usr/include/stdc-predef.h \
+ /home/rootlet/vision/include/vision.h /usr/include/c++/14.2.1/iostream \
  /usr/include/c++/14.2.1/bits/requires_hosted.h \
  /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/c++config.h \
  /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/os_defines.h \
@@ -366,4 +364,6 @@ CMakeFiles/vision_executable.dir/src/vision.cpp.o: \
  /usr/include/opencv4/opencv2/video/tracking.hpp \
  /usr/include/opencv4/opencv2/video/background_segm.hpp \
  /usr/include/opencv4/opencv2/cudaimgproc.hpp \
- /usr/include/opencv4/opencv2/cudaarithm.hpp
+ /usr/include/opencv4/opencv2/cudaarithm.hpp \
+ /usr/include/opencv4/opencv2/cudafilters.hpp \
+ /home/rootlet/vision/include/cuda_defines.h

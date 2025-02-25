@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/rootlet/git/computer_vision
+CMAKE_SOURCE_DIR = /home/rootlet/vision
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/rootlet/git/computer_vision/build
+CMAKE_BINARY_DIR = /home/rootlet/vision/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/vision_executable.dir/depend.make
@@ -73,32 +73,32 @@ CMakeFiles/vision_executable.dir/codegen:
 .PHONY : CMakeFiles/vision_executable.dir/codegen
 
 CMakeFiles/vision_executable.dir/src/main.cpp.o: CMakeFiles/vision_executable.dir/flags.make
-CMakeFiles/vision_executable.dir/src/main.cpp.o: /home/rootlet/git/computer_vision/src/main.cpp
+CMakeFiles/vision_executable.dir/src/main.cpp.o: /home/rootlet/vision/src/main.cpp
 CMakeFiles/vision_executable.dir/src/main.cpp.o: CMakeFiles/vision_executable.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/rootlet/git/computer_vision/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/vision_executable.dir/src/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/vision_executable.dir/src/main.cpp.o -MF CMakeFiles/vision_executable.dir/src/main.cpp.o.d -o CMakeFiles/vision_executable.dir/src/main.cpp.o -c /home/rootlet/git/computer_vision/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/rootlet/vision/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/vision_executable.dir/src/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/vision_executable.dir/src/main.cpp.o -MF CMakeFiles/vision_executable.dir/src/main.cpp.o.d -o CMakeFiles/vision_executable.dir/src/main.cpp.o -c /home/rootlet/vision/src/main.cpp
 
 CMakeFiles/vision_executable.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/vision_executable.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rootlet/git/computer_vision/src/main.cpp > CMakeFiles/vision_executable.dir/src/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rootlet/vision/src/main.cpp > CMakeFiles/vision_executable.dir/src/main.cpp.i
 
 CMakeFiles/vision_executable.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/vision_executable.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rootlet/git/computer_vision/src/main.cpp -o CMakeFiles/vision_executable.dir/src/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rootlet/vision/src/main.cpp -o CMakeFiles/vision_executable.dir/src/main.cpp.s
 
 CMakeFiles/vision_executable.dir/src/vision.cpp.o: CMakeFiles/vision_executable.dir/flags.make
-CMakeFiles/vision_executable.dir/src/vision.cpp.o: /home/rootlet/git/computer_vision/src/vision.cpp
+CMakeFiles/vision_executable.dir/src/vision.cpp.o: /home/rootlet/vision/src/vision.cpp
 CMakeFiles/vision_executable.dir/src/vision.cpp.o: CMakeFiles/vision_executable.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/rootlet/git/computer_vision/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/vision_executable.dir/src/vision.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/vision_executable.dir/src/vision.cpp.o -MF CMakeFiles/vision_executable.dir/src/vision.cpp.o.d -o CMakeFiles/vision_executable.dir/src/vision.cpp.o -c /home/rootlet/git/computer_vision/src/vision.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/rootlet/vision/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/vision_executable.dir/src/vision.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/vision_executable.dir/src/vision.cpp.o -MF CMakeFiles/vision_executable.dir/src/vision.cpp.o.d -o CMakeFiles/vision_executable.dir/src/vision.cpp.o -c /home/rootlet/vision/src/vision.cpp
 
 CMakeFiles/vision_executable.dir/src/vision.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/vision_executable.dir/src/vision.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rootlet/git/computer_vision/src/vision.cpp > CMakeFiles/vision_executable.dir/src/vision.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rootlet/vision/src/vision.cpp > CMakeFiles/vision_executable.dir/src/vision.cpp.i
 
 CMakeFiles/vision_executable.dir/src/vision.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/vision_executable.dir/src/vision.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rootlet/git/computer_vision/src/vision.cpp -o CMakeFiles/vision_executable.dir/src/vision.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rootlet/vision/src/vision.cpp -o CMakeFiles/vision_executable.dir/src/vision.cpp.s
 
 # Object files for target vision_executable
 vision_executable_OBJECTS = \
@@ -182,7 +182,7 @@ vision_executable: /usr/lib/libopencv_cudaarithm.so.4.11.0
 vision_executable: /usr/lib/libopencv_core.so.4.11.0
 vision_executable: /usr/lib/libopencv_cudev.so.4.11.0
 vision_executable: CMakeFiles/vision_executable.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/rootlet/git/computer_vision/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable vision_executable"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/rootlet/vision/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable vision_executable"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/vision_executable.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -194,6 +194,6 @@ CMakeFiles/vision_executable.dir/clean:
 .PHONY : CMakeFiles/vision_executable.dir/clean
 
 CMakeFiles/vision_executable.dir/depend:
-	cd /home/rootlet/git/computer_vision/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/rootlet/git/computer_vision /home/rootlet/git/computer_vision /home/rootlet/git/computer_vision/build /home/rootlet/git/computer_vision/build /home/rootlet/git/computer_vision/build/CMakeFiles/vision_executable.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/rootlet/vision/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/rootlet/vision /home/rootlet/vision /home/rootlet/vision/build /home/rootlet/vision/build /home/rootlet/vision/build/CMakeFiles/vision_executable.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/vision_executable.dir/depend
 
