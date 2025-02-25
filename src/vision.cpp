@@ -43,6 +43,8 @@ bool Vision::save_image(const cv::Mat& image, const std::string& filename)
 
 void Vision::tracking() {
     int radius = 1;
+    two_dim::tracking_offset offset;
+
     std::vector<cv::Scalar> threshholds = _get_thresholds();
 
     cv::VideoCapture cap(0);
@@ -59,8 +61,11 @@ void Vision::tracking() {
             std::cerr << "Error: Empty frame!" << std::endl;
             break;
         }
+
         std::vector <int> size = {_image.cols, _image.rows, radius};
         _draw_center_dot(_image, size);
+        
+        _mark_cornors(_image);
 
         _gpu_frame.upload(_image);
 
@@ -72,8 +77,10 @@ void Vision::tracking() {
     
         _draw_rect(_image, _blurred_cpu);
 
-        cv::imshow("GPU Accelerated", _image);
+        _calculate_offset(offset);
 
+        cv::imshow("GPU Accelerated", _image);
+        
         if (cv::waitKey(1) >= 0) {
             break;
         }
@@ -85,6 +92,20 @@ void Vision::tracking() {
 /*
 These are the helper functions to make the complete tracking using OpenCV and CUDA.
 */
+
+void Vision::_calculate_offset(two_dim::tracking_offset& output)
+{
+    output.x_offset = _center_image.x - _center_tracking.x;
+    output.y_offset = _center_image.y - _center_tracking.y;
+
+    output.distance = std::sqrt(output.x_offset * output.x_offset + output.y_offset * output.y_offset);
+    
+    output.angle = std::atan2(output.y_offset, output.x_offset) * 180.0 / CV_PI;
+
+    std::cout << "Offset: (" << output.x_offset << ", " << output.y_offset << ")" << std::endl;
+    std::cout << "Distance: " << output.distance << std::endl;
+    std::cout << "Angle: " << output.angle << std::endl;
+}
 
 
 std::vector<cv::Scalar> Vision::_get_thresholds()
@@ -176,7 +197,7 @@ void Vision::_draw_rect(cv::Mat& src_image, const cv::Mat& mask)
         int center_x = rect.x + rect.width / 2;
         int center_y = rect.y + rect.height / 2;
         // std::cout << "Center: (" << center_x << ", " << center_y << ")" << std::endl;
-        std::cout << "Area: " << max_area << std::endl;
+        // std::cout << "Area: " << max_area << std::endl;
         rect.x      = std::max(0, rect.x);
         rect.y      = std::max(0, rect.y);
         rect.width  = std::min(rect.width, src_image.cols - rect.x);
@@ -191,6 +212,8 @@ void Vision::_draw_rect(cv::Mat& src_image, const cv::Mat& mask)
                     thickness);
 
         cv::Point origin(center_x, center_y);
+        _center_tracking.x = center_x;
+        _center_tracking.y = center_y;
         cv::circle(src_image,
                 origin,
                 1,                       // radius
@@ -234,18 +257,18 @@ void Vision::_draw_square(cv::Mat& src_image, const cv::Mat& mask)
 
         int side = std::max(rect.width, rect.height); // force square, by finding the largest side and make both that size
 
-        int cx = rect.x + rect.width / 2;
-        int cy = rect.y + rect.height / 2;
+        int center_x = rect.x + rect.width / 2;
+        int center_y = rect.y + rect.height / 2;
         
-        std::cout << "Center: (" << cx << ", " << cy << ")" << std::endl;
+        // std::cout << "Center: (" << center_x << ", " << center_y << ")" << std::endl;
         
 
         int half_side = side / 2;
 
         // Calculate top-left and bottom-right points
         // (Clamped to the image boundaries if necessary)
-        cv::Point top_left(cx - half_side, cy - half_side);
-        cv::Point bottom_right(cx + half_side, cy + half_side);
+        cv::Point top_left(center_x - half_side, center_y - half_side);
+        cv::Point bottom_right(center_x + half_side, center_y + half_side);
 
         // Ensure the square is within image bounds (optional safety check)
         top_left.x      = std::max(top_left.x, 0);
@@ -257,7 +280,9 @@ void Vision::_draw_square(cv::Mat& src_image, const cv::Mat& mask)
 
         cv::rectangle(src_image, top_left, bottom_right,  cv::Scalar(brg::baby_pink_blue, brg::baby_pink_green, brg::baby_pink_red), thickness);
 
-        cv::Point origin(cx, cy);
+        cv::Point origin(center_x, center_y);
+        _center_tracking.x = center_x;
+        _center_tracking.y = center_y;
         int center_r = 1;
         cv::circle(
             src_image,
@@ -273,6 +298,8 @@ void Vision::_draw_center_dot(cv::Mat &src, std::vector<int> size){
     int center_x = size[0] / 2;
     int center_y = size[1] / 2;
     int center_r = size[2];
+    _center_image.x = center_x;
+    _center_image.y = center_y;
 
     cv::circle(
         src,
@@ -281,4 +308,29 @@ void Vision::_draw_center_dot(cv::Mat &src, std::vector<int> size){
         cv::Scalar(0, 0, 0),     // BGR: black
         cv::FILLED               // thickness or FILLED to make it a solid dot
     );
+}
+
+void Vision::_draw_dot(cv::Mat &src, int x, int y, cv::Vec3b color){
+    src.at<cv::Vec3b>(y, x) = color; // red pixel
+}
+
+void Vision::_mark_cornors(cv::Mat &src){
+    cv::Vec3b blue(255, 0, 0);
+    cv::Vec3b red(0, 0, 255);
+    cv::Vec3b green(0, 255, 0);
+    cv::Vec3b purple(255, 0, 255);
+
+
+    int width = src.cols;
+    int height = src.rows;
+    for (int i = 0; i < 4; i++){
+        for (int j = 0; j < 4; j++)
+        {
+            _draw_dot(src, 0 + i, 0 + j, blue);                     // top left
+            _draw_dot(src, width - 1 - i, 0 + j, red);              // top right
+            _draw_dot(src, 0 + i, height - 1 - j, green);           // bottom left
+            _draw_dot(src, width - 1 - i, height - 1 - j, purple);  // bottom right
+        }
+    }
+
 }

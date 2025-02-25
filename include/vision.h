@@ -21,6 +21,10 @@ class Vision {
         void display_image(const cv::Mat& image);
     
     private:
+        float _offset;
+        two_dim::points _center_image;
+        two_dim::points _center_tracking;
+
         cv::Mat _image, _blurred_cpu;
         cv::cuda::GpuMat _grey, _hsv, _blurred, _gpu_frame;
 
@@ -32,5 +36,7 @@ class Vision {
         void _draw_rect(cv::Mat& src_image, const cv::Mat& mask);
         void _draw_square(cv::Mat& src_image, const cv::Mat& mask);
         void _draw_center_dot(cv::Mat &src, std::vector<int> size);
-
+        void _calculate_offset(two_dim::tracking_offset& output);
+        void _draw_dot(cv::Mat &src, int x, int y, cv::Vec3b color);
+        void _mark_cornors(cv::Mat &src);
 };

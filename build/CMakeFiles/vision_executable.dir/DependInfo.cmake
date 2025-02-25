@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/rootlet/vision/src/main.cpp" "CMakeFiles/vision_executable.dir/src/main.cpp.o" "gcc" "CMakeFiles/vision_executable.dir/src/main.cpp.o.d"
-  "/home/rootlet/vision/src/vision.cpp" "CMakeFiles/vision_executable.dir/src/vision.cpp.o" "gcc" "CMakeFiles/vision_executable.dir/src/vision.cpp.o.d"
+  "/home/rootlet/git/vision/src/main.cpp" "CMakeFiles/vision_executable.dir/src/main.cpp.o" "gcc" "CMakeFiles/vision_executable.dir/src/main.cpp.o.d"
+  "/home/rootlet/git/vision/src/vision.cpp" "CMakeFiles/vision_executable.dir/src/vision.cpp.o" "gcc" "CMakeFiles/vision_executable.dir/src/vision.cpp.o.d"
   "" "vision_executable" "gcc" "CMakeFiles/vision_executable.dir/link.d"
   )
 

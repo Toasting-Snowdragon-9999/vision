@@ -1,4 +1,5 @@
-
+#ifndef CUDA_DEFINES_H
+#define CUDA_DEFINES_H
 
 namespace hsv {
     enum Colors {    
@@ -39,11 +40,23 @@ namespace brg {
     };
 }
 
-/*
+namespace two_dim {
+    struct points{
+        float x;
+        float y;
+    };
 
+    struct sizes{
+        float width;
+        float height;
+    };
 
+    struct tracking_offset{
+        float x_offset;
+        float y_offset;
+        float angle;
+        float distance;
+    };
+}
 
-OpenCV HSV dark: (35.5, 76.5, 206.55)
-OpenCV HSV light: (35.5, 79.05, 188.7)
-
-*/
+#endif
