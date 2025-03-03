@@ -2,6 +2,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/vision_executable.dir/link.d"
   "CMakeFiles/vision_executable.dir/src/main.cpp.o"
   "CMakeFiles/vision_executable.dir/src/main.cpp.o.d"
+  "CMakeFiles/vision_executable.dir/src/priority_vision.cpp.o"
+  "CMakeFiles/vision_executable.dir/src/priority_vision.cpp.o.d"
   "CMakeFiles/vision_executable.dir/src/vision.cpp.o"
   "CMakeFiles/vision_executable.dir/src/vision.cpp.o.d"
   "vision_executable"

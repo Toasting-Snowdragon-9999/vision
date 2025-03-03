@@ -35,6 +35,7 @@ endif()
 set(SOURCES
     src/main.cpp
     src/vision.cpp
+    src/priority_vision.cpp
 )
 
 # Add executable

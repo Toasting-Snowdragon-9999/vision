@@ -153,6 +153,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vision_executable.dir/build.make CMakeFiles/vision_executable.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/priority_vision.o: src/priority_vision.cpp.o
+.PHONY : src/priority_vision.o
+
+# target to build an object file
+src/priority_vision.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vision_executable.dir/build.make CMakeFiles/vision_executable.dir/src/priority_vision.cpp.o
+.PHONY : src/priority_vision.cpp.o
+
+src/priority_vision.i: src/priority_vision.cpp.i
+.PHONY : src/priority_vision.i
+
+# target to preprocess a source file
+src/priority_vision.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vision_executable.dir/build.make CMakeFiles/vision_executable.dir/src/priority_vision.cpp.i
+.PHONY : src/priority_vision.cpp.i
+
+src/priority_vision.s: src/priority_vision.cpp.s
+.PHONY : src/priority_vision.s
+
+# target to generate assembly for a file
+src/priority_vision.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vision_executable.dir/build.make CMakeFiles/vision_executable.dir/src/priority_vision.cpp.s
+.PHONY : src/priority_vision.cpp.s
+
 src/vision.o: src/vision.cpp.o
 .PHONY : src/vision.o
 
@@ -189,6 +213,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/priority_vision.o"
+	@echo "... src/priority_vision.i"
+	@echo "... src/priority_vision.s"
 	@echo "... src/vision.o"
 	@echo "... src/vision.i"
 	@echo "... src/vision.s"

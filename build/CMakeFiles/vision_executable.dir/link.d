@@ -4,6 +4,7 @@ vision_executable: \
   /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/14.2.1/crtbeginS.o \
   CMakeFiles/vision_executable.dir/src/main.cpp.o \
   CMakeFiles/vision_executable.dir/src/vision.cpp.o \
+  CMakeFiles/vision_executable.dir/src/priority_vision.cpp.o \
   /usr/lib/libopencv_gapi.so.4.11.0 \
   /usr/lib/libopencv_stitching.so.4.11.0 \
   /usr/lib/libopencv_alphamat.so.4.11.0 \
@@ -454,6 +455,8 @@ vision_executable: \
 CMakeFiles/vision_executable.dir/src/main.cpp.o:
 
 CMakeFiles/vision_executable.dir/src/vision.cpp.o:
+
+CMakeFiles/vision_executable.dir/src/priority_vision.cpp.o:
 
 /usr/lib/libopencv_gapi.so.4.11.0:
 
