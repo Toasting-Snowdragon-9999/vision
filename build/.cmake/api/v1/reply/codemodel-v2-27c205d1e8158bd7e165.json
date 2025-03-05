@@ -15,7 +15,8 @@
 					"source" : ".",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1
 					]
 				}
 			],
@@ -30,7 +31,8 @@
 					"name" : "vision_project",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1
 					]
 				}
 			],
@@ -38,8 +40,15 @@
 			[
 				{
 					"directoryIndex" : 0,
+					"id" : "find_hsv::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-find_hsv-Debug-8feac73f81eb9e5a7d0a.json",
+					"name" : "find_hsv",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
 					"id" : "vision_executable::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-vision_executable-Debug-2679023da54251f61965.json",
+					"jsonFile" : "target-vision_executable-Debug-274f561026b3df385d8b.json",
 					"name" : "vision_executable",
 					"projectIndex" : 0
 				}

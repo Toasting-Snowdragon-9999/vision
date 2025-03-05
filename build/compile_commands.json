@@ -16,5 +16,23 @@
   "command": "/usr/bin/clang++  -I/home/rootlet/git/vision/include -isystem /usr/include/opencv4 -g -std=gnu++17 -o CMakeFiles/vision_executable.dir/src/priority_vision.cpp.o -c /home/rootlet/git/vision/src/priority_vision.cpp",
   "file": "/home/rootlet/git/vision/src/priority_vision.cpp",
   "output": "CMakeFiles/vision_executable.dir/src/priority_vision.cpp.o"
+},
+{
+  "directory": "/home/rootlet/git/vision/build",
+  "command": "/usr/bin/clang++  -I/home/rootlet/git/vision/include -isystem /usr/include/opencv4 -g -std=gnu++17 -o CMakeFiles/find_hsv.dir/src/get_hsv_center.cpp.o -c /home/rootlet/git/vision/src/get_hsv_center.cpp",
+  "file": "/home/rootlet/git/vision/src/get_hsv_center.cpp",
+  "output": "CMakeFiles/find_hsv.dir/src/get_hsv_center.cpp.o"
+},
+{
+  "directory": "/home/rootlet/git/vision/build",
+  "command": "/usr/bin/clang++  -I/home/rootlet/git/vision/include -isystem /usr/include/opencv4 -g -std=gnu++17 -o CMakeFiles/find_hsv.dir/src/vision.cpp.o -c /home/rootlet/git/vision/src/vision.cpp",
+  "file": "/home/rootlet/git/vision/src/vision.cpp",
+  "output": "CMakeFiles/find_hsv.dir/src/vision.cpp.o"
+},
+{
+  "directory": "/home/rootlet/git/vision/build",
+  "command": "/usr/bin/clang++  -I/home/rootlet/git/vision/include -isystem /usr/include/opencv4 -g -std=gnu++17 -o CMakeFiles/find_hsv.dir/src/priority_vision.cpp.o -c /home/rootlet/git/vision/src/priority_vision.cpp",
+  "file": "/home/rootlet/git/vision/src/priority_vision.cpp",
+  "output": "CMakeFiles/find_hsv.dir/src/priority_vision.cpp.o"
 }
 ]

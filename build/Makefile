@@ -129,6 +129,43 @@ vision_executable/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vision_executable.dir/build.make CMakeFiles/vision_executable.dir/build
 .PHONY : vision_executable/fast
 
+#=============================================================================
+# Target rules for targets named find_hsv
+
+# Build rule for target.
+find_hsv: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 find_hsv
+.PHONY : find_hsv
+
+# fast build rule for target.
+find_hsv/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/find_hsv.dir/build.make CMakeFiles/find_hsv.dir/build
+.PHONY : find_hsv/fast
+
+src/get_hsv_center.o: src/get_hsv_center.cpp.o
+.PHONY : src/get_hsv_center.o
+
+# target to build an object file
+src/get_hsv_center.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/find_hsv.dir/build.make CMakeFiles/find_hsv.dir/src/get_hsv_center.cpp.o
+.PHONY : src/get_hsv_center.cpp.o
+
+src/get_hsv_center.i: src/get_hsv_center.cpp.i
+.PHONY : src/get_hsv_center.i
+
+# target to preprocess a source file
+src/get_hsv_center.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/find_hsv.dir/build.make CMakeFiles/find_hsv.dir/src/get_hsv_center.cpp.i
+.PHONY : src/get_hsv_center.cpp.i
+
+src/get_hsv_center.s: src/get_hsv_center.cpp.s
+.PHONY : src/get_hsv_center.s
+
+# target to generate assembly for a file
+src/get_hsv_center.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/find_hsv.dir/build.make CMakeFiles/find_hsv.dir/src/get_hsv_center.cpp.s
+.PHONY : src/get_hsv_center.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -159,6 +196,7 @@ src/priority_vision.o: src/priority_vision.cpp.o
 # target to build an object file
 src/priority_vision.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vision_executable.dir/build.make CMakeFiles/vision_executable.dir/src/priority_vision.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/find_hsv.dir/build.make CMakeFiles/find_hsv.dir/src/priority_vision.cpp.o
 .PHONY : src/priority_vision.cpp.o
 
 src/priority_vision.i: src/priority_vision.cpp.i
@@ -167,6 +205,7 @@ src/priority_vision.i: src/priority_vision.cpp.i
 # target to preprocess a source file
 src/priority_vision.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vision_executable.dir/build.make CMakeFiles/vision_executable.dir/src/priority_vision.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/find_hsv.dir/build.make CMakeFiles/find_hsv.dir/src/priority_vision.cpp.i
 .PHONY : src/priority_vision.cpp.i
 
 src/priority_vision.s: src/priority_vision.cpp.s
@@ -175,6 +214,7 @@ src/priority_vision.s: src/priority_vision.cpp.s
 # target to generate assembly for a file
 src/priority_vision.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vision_executable.dir/build.make CMakeFiles/vision_executable.dir/src/priority_vision.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/find_hsv.dir/build.make CMakeFiles/find_hsv.dir/src/priority_vision.cpp.s
 .PHONY : src/priority_vision.cpp.s
 
 src/vision.o: src/vision.cpp.o
@@ -183,6 +223,7 @@ src/vision.o: src/vision.cpp.o
 # target to build an object file
 src/vision.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vision_executable.dir/build.make CMakeFiles/vision_executable.dir/src/vision.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/find_hsv.dir/build.make CMakeFiles/find_hsv.dir/src/vision.cpp.o
 .PHONY : src/vision.cpp.o
 
 src/vision.i: src/vision.cpp.i
@@ -191,6 +232,7 @@ src/vision.i: src/vision.cpp.i
 # target to preprocess a source file
 src/vision.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vision_executable.dir/build.make CMakeFiles/vision_executable.dir/src/vision.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/find_hsv.dir/build.make CMakeFiles/find_hsv.dir/src/vision.cpp.i
 .PHONY : src/vision.cpp.i
 
 src/vision.s: src/vision.cpp.s
@@ -199,6 +241,7 @@ src/vision.s: src/vision.cpp.s
 # target to generate assembly for a file
 src/vision.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vision_executable.dir/build.make CMakeFiles/vision_executable.dir/src/vision.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/find_hsv.dir/build.make CMakeFiles/find_hsv.dir/src/vision.cpp.s
 .PHONY : src/vision.cpp.s
 
 # Help Target
@@ -209,7 +252,11 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... find_hsv"
 	@echo "... vision_executable"
+	@echo "... src/get_hsv_center.o"
+	@echo "... src/get_hsv_center.i"
+	@echo "... src/get_hsv_center.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

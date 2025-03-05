@@ -33,13 +33,14 @@ endif()
 
 # Source files
 set(SOURCES
-    src/main.cpp
     src/vision.cpp
     src/priority_vision.cpp
 )
 
 # Add executable
-add_executable(vision_executable ${SOURCES})
+add_executable(vision_executable src/main.cpp ${SOURCES})
+add_executable(find_hsv src/get_hsv_center.cpp ${SOURCES})
+
 
 # Link OpenCV libraries (including CUDA)
 target_link_libraries(vision_executable PRIVATE ${OpenCV_LIBS})
@@ -47,3 +48,8 @@ target_link_libraries(vision_executable PRIVATE ${OpenCV_LIBS})
 # Include OpenCV headers
 target_include_directories(vision_executable PRIVATE ${OpenCV_INCLUDE_DIRS})
 
+# Link OpenCV libraries (including CUDA)
+target_link_libraries(find_hsv PRIVATE ${OpenCV_LIBS})
+
+# Include OpenCV headers
+target_include_directories(find_hsv PRIVATE ${OpenCV_INCLUDE_DIRS})

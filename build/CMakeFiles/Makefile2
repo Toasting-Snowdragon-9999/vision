@@ -64,10 +64,12 @@ CMAKE_BINARY_DIR = /home/rootlet/git/vision/build
 
 # The main recursive "all" target.
 all: CMakeFiles/vision_executable.dir/all
+all: CMakeFiles/find_hsv.dir/all
 .PHONY : all
 
 # The main recursive "codegen" target.
 codegen: CMakeFiles/vision_executable.dir/codegen
+codegen: CMakeFiles/find_hsv.dir/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
@@ -76,6 +78,7 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/vision_executable.dir/clean
+clean: CMakeFiles/find_hsv.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -85,7 +88,7 @@ clean: CMakeFiles/vision_executable.dir/clean
 CMakeFiles/vision_executable.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vision_executable.dir/build.make CMakeFiles/vision_executable.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vision_executable.dir/build.make CMakeFiles/vision_executable.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/rootlet/git/vision/build/CMakeFiles --progress-num=1,2,3,4 "Built target vision_executable"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/rootlet/git/vision/build/CMakeFiles --progress-num=5,6,7,8 "Built target vision_executable"
 .PHONY : CMakeFiles/vision_executable.dir/all
 
 # Build rule for subdir invocation for target.
@@ -102,13 +105,45 @@ vision_executable: CMakeFiles/vision_executable.dir/rule
 # codegen rule for target.
 CMakeFiles/vision_executable.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vision_executable.dir/build.make CMakeFiles/vision_executable.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/rootlet/git/vision/build/CMakeFiles --progress-num=1,2,3,4 "Finished codegen for target vision_executable"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/rootlet/git/vision/build/CMakeFiles --progress-num=5,6,7,8 "Finished codegen for target vision_executable"
 .PHONY : CMakeFiles/vision_executable.dir/codegen
 
 # clean rule for target.
 CMakeFiles/vision_executable.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vision_executable.dir/build.make CMakeFiles/vision_executable.dir/clean
 .PHONY : CMakeFiles/vision_executable.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/find_hsv.dir
+
+# All Build rule for target.
+CMakeFiles/find_hsv.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/find_hsv.dir/build.make CMakeFiles/find_hsv.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/find_hsv.dir/build.make CMakeFiles/find_hsv.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/rootlet/git/vision/build/CMakeFiles --progress-num=1,2,3,4 "Built target find_hsv"
+.PHONY : CMakeFiles/find_hsv.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/find_hsv.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rootlet/git/vision/build/CMakeFiles 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/find_hsv.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rootlet/git/vision/build/CMakeFiles 0
+.PHONY : CMakeFiles/find_hsv.dir/rule
+
+# Convenience name for target.
+find_hsv: CMakeFiles/find_hsv.dir/rule
+.PHONY : find_hsv
+
+# codegen rule for target.
+CMakeFiles/find_hsv.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/find_hsv.dir/build.make CMakeFiles/find_hsv.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/rootlet/git/vision/build/CMakeFiles --progress-num=1,2,3,4 "Finished codegen for target find_hsv"
+.PHONY : CMakeFiles/find_hsv.dir/codegen
+
+# clean rule for target.
+CMakeFiles/find_hsv.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/find_hsv.dir/build.make CMakeFiles/find_hsv.dir/clean
+.PHONY : CMakeFiles/find_hsv.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

@@ -1,5 +1,5 @@
-CMakeFiles/vision_executable.dir/src/main.cpp.o: \
-  /home/rootlet/git/vision/src/main.cpp \
+CMakeFiles/find_hsv.dir/src/get_hsv_center.cpp.o: \
+  /home/rootlet/git/vision/src/get_hsv_center.cpp \
   /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../include/c++/14.2.1/iostream \
   /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../include/c++/14.2.1/bits/requires_hosted.h \
   /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../include/c++/14.2.1/x86_64-pc-linux-gnu/bits/c++config.h \
@@ -177,7 +177,6 @@ CMakeFiles/vision_executable.dir/src/main.cpp.o: \
   /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../include/c++/14.2.1/bits/stl_vector.h \
   /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../include/c++/14.2.1/bits/stl_bvector.h \
   /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../include/c++/14.2.1/bits/vector.tcc \
-  /home/rootlet/git/vision/include/vision.h \
   /usr/include/opencv4/opencv2/opencv.hpp \
   /usr/include/opencv4/opencv2/opencv_modules.hpp \
   /usr/include/opencv4/opencv2/core.hpp \
@@ -407,10 +406,4 @@ CMakeFiles/vision_executable.dir/src/main.cpp.o: \
   /usr/include/opencv4/opencv2/video/background_segm.hpp \
   /usr/include/opencv4/opencv2/cudaimgproc.hpp \
   /usr/include/opencv4/opencv2/cudaarithm.hpp \
-  /usr/include/opencv4/opencv2/cudafilters.hpp \
-  /home/rootlet/git/vision/include/cuda_defines.h \
-  /home/rootlet/git/vision/include/priority_vision.h \
-  /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../include/c++/14.2.1/optional \
-  /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../include/c++/14.2.1/thread \
-  /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../include/c++/14.2.1/bits/std_thread.h \
-  /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../include/c++/14.2.1/bits/this_thread_sleep.h
+  /usr/include/opencv4/opencv2/cudafilters.hpp

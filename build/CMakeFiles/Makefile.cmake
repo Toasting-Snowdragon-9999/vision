@@ -71,4 +71,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/vision_executable.dir/DependInfo.cmake"
+  "CMakeFiles/find_hsv.dir/DependInfo.cmake"
   )

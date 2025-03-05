@@ -30,6 +30,35 @@ namespace hsv {
         wtennis_light_sat = 25,
         wtennis_light_val = 175,
     };
+
+    inline std::vector<cv::Scalar> predefines_red(){
+        std::vector<cv::Scalar> thresholds;
+        cv::Scalar lower_bound(150, 100, 120);  // Lower HSV threshold
+        cv::Scalar upper_bound(175, 255, 220);  // Upper HSV threshold
+        thresholds.push_back(lower_bound);
+        thresholds.push_back(upper_bound);
+        return thresholds;
+    }
+    inline std::vector<cv::Scalar> predefines_blue(){
+        std::vector<cv::Scalar> thresholds;
+        cv::Scalar lower_bound(75, 21, 98);   // Lower HSV threshold
+        cv::Scalar upper_bound(111, 116, 242); // Upper HSV threshold
+        
+        thresholds.push_back(lower_bound);
+        thresholds.push_back(upper_bound);
+        return thresholds;
+    }
+
+    inline std::vector<cv::Scalar> predefines_yellow(){
+        std::vector<cv::Scalar> thresholds;
+        cv::Scalar lower_bound(11, 21, 95);    // Lower HSV threshold
+        cv::Scalar upper_bound(37, 180, 255);  // Upper HSV threshold
+        
+        thresholds.push_back(lower_bound);
+        thresholds.push_back(upper_bound);
+        return thresholds;
+    }
+
 }
 
 namespace brg {

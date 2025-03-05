@@ -1,3 +1,4 @@
 /home/rootlet/git/vision/build/CMakeFiles/vision_executable.dir
+/home/rootlet/git/vision/build/CMakeFiles/find_hsv.dir
 /home/rootlet/git/vision/build/CMakeFiles/edit_cache.dir
 /home/rootlet/git/vision/build/CMakeFiles/rebuild_cache.dir
